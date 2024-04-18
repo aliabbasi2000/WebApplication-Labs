@@ -36,8 +36,8 @@ var films = [
   },
   { 
     id: 5, 
-    name: "Yali Chapkini", 
-    date: dayjs("01/01/2024"),
+    name: "Marvel Movies :)", 
+    date: dayjs("04/17/2024"),
     rate: 1,
     favorite: false
   
@@ -213,7 +213,9 @@ table_lastMnoth.innerHTML = "";
       checkbox = "";
     }
 
-    if (film.rate === 5){
+    // Check if the given date is after one months ago
+    const oneMonthsAgo = dayjs().subtract(1, 'month');
+    if (film.date.isAfter(oneMonthsAgo)){
 
       
     const tr = document.createElement("tr")
